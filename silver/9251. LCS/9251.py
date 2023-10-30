@@ -19,16 +19,3 @@ def LCS(X,Y):
 
 print(LCS(X,Y))
 
-# string_a = ' ' + sys.stdin.readline().rstrip()
-# string_b = ' ' + sys.stdin.readline().rstrip()
-# print(len(string_a), len(string_b))
-# dp = [[0] * len(string_b) for _ in range(len(string_a))]
-
-# for i in range(1, len(string_a)):
-#     for j in range(1, len(string_b)):
-#         if string_a[i] == string_b[j]:
-#             dp[i][j] = dp[i - 1][j - 1] + 1
-#         else:
-#             dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
-            
-# print(dp)
