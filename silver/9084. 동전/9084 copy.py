@@ -1,3 +1,5 @@
+## dp 테이블 이해 중 ###
+
 import sys 
 
 T= int(input())
@@ -17,12 +19,23 @@ for i in range(T):
     for coin in coins:
         for i in range(money+1):
             # 현재 금액(i)를 현재 돌리고 있는 coin이 채울 수 있다면 
-            # 이전까지의 경우의 수에 현재 동전으로 만들 수 있는 경우의 수를 더한다.
-            # dp[i-coin]             dp[i]
+            # 이전까지의 
             if i>=coin:
+                print(i,' / ',dp[:i])
                 dp[i]+=dp[i-coin]
+
+            
+        print(dp)
+
+                
+    
+    print("final")
+    print(dp)
+    print("/end")
                 
     print(dp[money])  
+    
+    
     
     
 
