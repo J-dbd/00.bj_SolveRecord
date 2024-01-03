@@ -11,4 +11,5 @@ for i in range(1, N):
     rgb_arr[i][1] = min(rgb_arr[i-1][0], rgb_arr[i-1][2]) + rgb_arr[i][1]
     rgb_arr[i][2] = min(rgb_arr[i-1][0], rgb_arr[i-1][1]) + rgb_arr[i][2]
 
-print(rgb_arr)
+res = min(rgb_arr[N-1][0], rgb_arr[N-1][1], rgb_arr[N-1][2])
+print(res)
