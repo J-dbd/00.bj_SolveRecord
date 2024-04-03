@@ -1,5 +1,8 @@
 import sys
+from itertools import combinations
 
+
+ # ######### DFS -1
 def lotto(k, arr):
     visited = [0 for i in range(len(arr))]
     def dfs(starting, cnt):
@@ -20,6 +23,7 @@ def lotto(k, arr):
     
     dfs(0, 0)
     
+# ######### DFS -2 
 def dfs_combo(cnt, arr, path):
     if(cnt==0):
         print(*path)
@@ -29,8 +33,14 @@ def dfs_combo(cnt, arr, path):
         path.append(arr[i])
         dfs_combo(cnt-1, arr[i+1:], path)
         path.pop()
-    
-    
+
+# ######## combination by lib
+def combin(arr, k):
+    comb = list(combinations(arr, k))
+    for c in comb:
+        print(' '.join(map(str, c)))
+
+
 num_list = []
 while True:
     temp = list(map(int, sys.stdin.readline().split()))
@@ -38,8 +48,13 @@ while True:
     k = temp[0]
     arr = temp[1:]
     
-    visited = [0 for i in range(len(arr))]
+    # ######### DFS -1
     #lotto(6, arr)
+    
+    # ######### DFS -2 
     path=[]
-    dfs_combo(6, arr,path)
+    #dfs_combo(6, arr,path)
+    
+    # ######## combination by lib
+    combin(arr, 6)
     print()
