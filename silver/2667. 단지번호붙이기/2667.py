@@ -23,11 +23,17 @@ def searching_bfs():
     
     while queue:
         currX, currY = queue.popleft()
+  
         
         for i in range(4):
-            nextX, nextY = currX+dx, currY+dy
+            nextX, nextY = currX+dx[i], currY+dy[i]
             
             if(0<=nextX<N and 0<=nextY<N):
                 if(field[nextX][nextY]==1):
                     field[nextX][nextY] = field[currX][currY]+1
+                    queue.append([nextX, nextY])
                     
+                    
+print(field)     
+searching_bfs() 
+print(field)                   
