@@ -23,5 +23,3 @@ def recur10(num, ten, mylist):
         return recur10(next, next_ten, mylist)
 
 recur10(495, 10, mylist)
-
-print(mylist)
